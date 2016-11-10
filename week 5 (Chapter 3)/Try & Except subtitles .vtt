@@ -1,0 +1,902 @@
+WEBVTT
+
+1
+00:00:00.110 --> 00:00:02.050
+So we're almost done with conditionals.
+
+2
+00:00:02.050 --> 00:00:05.870
+I want to show you one
+more kind of conditional.
+
+3
+00:00:05.870 --> 00:00:06.830
+It's a little bit different.
+
+4
+00:00:08.240 --> 00:00:12.710
+It's not a bit of code
+structure that you make,
+
+5
+00:00:12.710 --> 00:00:17.810
+it is dealing with the fact
+that some things may blow up.
+
+6
+00:00:19.020 --> 00:00:24.010
+Like if you read a number from a user and
+you try to convert it to a floating
+
+7
+00:00:24.010 --> 00:00:29.110
+point number, as you may have already done
+in some of your homework, it can blow up.
+
+8
+00:00:29.110 --> 00:00:34.140
+You know it's going to blow up, but you
+don't exactly want to kill your program.
+
+9
+00:00:34.140 --> 00:00:39.410
+So the concept of try and except are,
+hey, this is a dangerous thing.
+
+10
+00:00:39.410 --> 00:00:42.210
+I know it might blow up,
+I know exactly what it might blow up, but
+
+11
+00:00:42.210 --> 00:00:45.120
+I don't want to die, and I don't want
+to stop my program when it blows up.
+
+12
+00:00:45.120 --> 00:00:48.810
+I want to continue and
+that's the purpose of the except block.
+
+13
+00:00:48.810 --> 00:00:53.350
+So here's a little bit of code, and
+you know we've done this code before.
+
+14
+00:00:53.350 --> 00:00:57.720
+This is code that's kind of similar
+to your rate and pay homework,
+
+15
+00:00:57.720 --> 00:01:02.800
+where you read a string using raw input,
+you converted it using float, but
+
+16
+00:01:02.800 --> 00:01:06.030
+then if you typed in Fred,
+the thing blows up.
+
+17
+00:01:06.030 --> 00:01:08.250
+So we're kind of simulating
+that right here.
+
+18
+00:01:08.250 --> 00:01:11.720
+So here we have a variable
+a string called Hello Bob, and
+
+19
+00:01:11.720 --> 00:01:15.010
+we try to turn it into an integer,
+and then we're going to print that out.
+
+20
+00:01:15.010 --> 00:01:19.000
+And then we have another string that
+has the letters one, two, three.
+
+21
+00:01:19.000 --> 00:01:21.670
+You convert that to an integer,
+and then we print that one out.
+
+22
+00:01:22.680 --> 00:01:29.110
+The problem is, is that when this runs,
+this is going to fail.
+
+23
+00:01:29.110 --> 00:01:30.660
+It's going to fail with this traceback.
+
+24
+00:01:31.700 --> 00:01:32.550
+Okay?
+
+25
+00:01:32.550 --> 00:01:39.310
+And the problem is, is when the traceback
+happens, the program stops executing.
+
+26
+00:01:39.310 --> 00:01:44.950
+The traceback is Python's way of
+asking you, hey, this would be bad.
+
+27
+00:01:44.950 --> 00:01:45.740
+I don't know what to do.
+
+28
+00:01:45.740 --> 00:01:47.430
+I'm stopping.
+
+29
+00:01:47.430 --> 00:01:51.200
+So that means that the rest
+of your program is gone.
+
+30
+00:01:52.580 --> 00:01:54.520
+Right?
+The fact that we had stuff down here
+
+31
+00:01:54.520 --> 00:01:55.830
+doesn't matter.
+
+32
+00:01:55.830 --> 00:01:58.840
+This line died with the traceback.
+
+33
+00:01:58.840 --> 00:01:59.920
+It stopped.
+
+34
+00:01:59.920 --> 00:02:02.660
+It doesn't like give you a traceback and
+then keep going.
+
+35
+00:02:02.660 --> 00:02:04.310
+It gives you a traceback and
+that's the end.
+
+36
+00:02:04.310 --> 00:02:08.530
+Now this might be something,
+instead of just the string hello Bob,
+
+37
+00:02:08.530 --> 00:02:13.150
+which is insane, data might have come from
+a raw input, where the user was typing,
+
+38
+00:02:13.150 --> 00:02:14.360
+and you're saying, give me a number.
+
+39
+00:02:14.360 --> 00:02:17.670
+And they type something that's not
+a number, and this would blow up.
+
+40
+00:02:17.670 --> 00:02:19.230
+It's like, hey I know it's going to blow up.
+
+41
+00:02:20.370 --> 00:02:24.820
+The problem with this is that you don't,
+oops, clear the thing.
+
+42
+00:02:26.040 --> 00:02:27.310
+Now we have to start it on fire again.
+
+43
+00:02:28.710 --> 00:02:30.340
+Okay, it's on fire.
+
+44
+00:02:30.340 --> 00:02:33.660
+The problem is, is that in a sense,
+this program is you.
+
+45
+00:02:34.690 --> 00:02:39.984
+If you recall, we have you as the typing
+these commands into these scripts,
+
+46
+00:02:39.984 --> 00:02:44.520
+feeding the central processing unit,
+answering the question, what next?
+
+47
+00:02:44.520 --> 00:02:48.870
+So you should take it a little
+personally when your program
+
+48
+00:02:48.870 --> 00:02:53.690
+gets a traceback because that means you,
+in the form of your program,
+
+49
+00:02:53.690 --> 00:02:57.980
+have been vaporized and you're not
+present to give any more instructions.
+
+50
+00:02:57.980 --> 00:02:58.670
+It stops.
+
+51
+00:02:58.670 --> 00:03:02.874
+It stops dead in its tracks. You are gone.
+
+52
+00:03:02.874 --> 00:03:06.410
+So, we want to make sure
+we control this behavior.
+
+53
+00:03:06.410 --> 00:03:09.000
+We know it might blow up, and
+
+54
+00:03:09.000 --> 00:03:14.720
+we want to capture the situation where
+it does and execute alternate code.
+
+55
+00:03:14.720 --> 00:03:17.240
+Okay, so here it goes.
+
+56
+00:03:17.240 --> 00:03:18.910
+It's a bit of syntax.
+
+57
+00:03:18.910 --> 00:03:22.350
+I mentioned that it uses the try and
+except key words.
+
+58
+00:03:22.350 --> 00:03:26.620
+These are reserved words in Python. And
+then it's a little indented block.
+
+59
+00:03:26.620 --> 00:03:30.490
+So astr='hello Bob', great.
+
+60
+00:03:30.490 --> 00:03:32.930
+Try means we're about to
+do something dangerous,
+
+61
+00:03:32.930 --> 00:03:35.580
+let's take out some
+insurance policy on it.
+
+62
+00:03:35.580 --> 00:03:38.530
+And that is, we are going to
+convert this to an integer.
+
+63
+00:03:38.530 --> 00:03:41.910
+Take astr, convert to an integer,
+put it in istr.
+
+64
+00:03:42.980 --> 00:03:46.550
+If that works, great, we'll just
+continue on and ignore this except.
+
+65
+00:03:46.550 --> 00:03:50.840
+If it blows up, we're going to 
+jump into the except block and
+
+66
+00:03:50.840 --> 00:03:53.330
+then we'll have alternate,
+substitute code.
+
+67
+00:03:53.330 --> 00:03:57.440
+In this case, I'm going to set the variable
+to negative one as an indicator.
+
+68
+00:03:57.440 --> 00:03:58.690
+Then I'll print it out.
+
+69
+00:03:58.690 --> 00:03:59.900
+And I'll do it again.
+
+70
+00:03:59.900 --> 00:04:02.940
+Try this code, and away we go.
+
+71
+00:04:02.940 --> 00:04:07.666
+So, when this runs,
+we know exactly how it's going to run.
+
+72
+00:04:07.666 --> 00:04:12.656
+It- Come back.
+
+73
+00:04:12.656 --> 00:04:15.360
+We'll set this string.
+
+74
+00:04:15.360 --> 00:04:17.480
+The try takes out the insurance.
+
+75
+00:04:17.480 --> 00:04:22.660
+This blows up, so
+it runs down to here and runs this part.
+
+76
+00:04:22.660 --> 00:04:26.125
+And then it'll print, First -1.
+
+77
+00:04:26.125 --> 00:04:31.870
+And it sets the string to one, two, three,
+not 123, but one, two, three, as a string.
+
+78
+00:04:31.870 --> 00:04:34.050
+It takes out an insurance policy.
+
+79
+00:04:34.050 --> 00:04:38.826
+This time it works and that puts,
+istr is going to be 123, so
+
+80
+00:04:38.826 --> 00:04:45.300
+we don't run the except code, and so
+out comes, the second, one, two, three.
+
+81
+00:04:46.400 --> 00:04:47.170
+Okay?
+
+82
+00:04:47.170 --> 00:04:53.050
+So the try is, take out insurance
+on this little bit of code, and
+
+83
+00:04:53.050 --> 00:04:55.140
+if it fails, run this alternate code.
+
+84
+00:04:55.140 --> 00:04:56.599
+If not, skip the alternate code.
+
+85
+00:04:57.920 --> 00:04:59.540
+So it's kind of conditional.
+
+86
+00:04:59.540 --> 00:05:03.340
+If you put multiple lines in
+the block between the try and
+
+87
+00:05:03.340 --> 00:05:06.600
+the except, it runs until one dies.
+
+88
+00:05:06.600 --> 00:05:08.010
+So it doesn't come back.
+
+89
+00:05:08.010 --> 00:05:12.560
+Okay, it's not taking insurance out
+separately on all three statements,
+
+90
+00:05:12.560 --> 00:05:15.120
+it's like, here's a block of stuff and
+if anything blows up, stop.
+
+91
+00:05:17.060 --> 00:05:20.070
+And the things that run do run, so,
+
+92
+00:05:20.070 --> 00:05:24.310
+if this is really kind of bad code because
+you really don't want the print in here.
+
+93
+00:05:24.310 --> 00:05:29.030
+It's actually a good idea in the try,
+except to have as little in the try
+
+94
+00:05:29.030 --> 00:05:33.848
+block as you possibly can so
+you're real clear on what's going to fail.
+
+95
+00:05:33.848 --> 00:05:35.552
+So here we come in [SOUND].
+
+96
+00:05:35.552 --> 00:05:37.640
+It's Bob, so it's going to fail.
+
+97
+00:05:37.640 --> 00:05:41.880
+We run this, that runs successfully,
+this blows up, so
+
+98
+00:05:41.880 --> 00:05:45.640
+it quits and jumps into
+the except blocks and continues.
+
+99
+00:05:45.640 --> 00:05:49.430
+The point is,
+is that this code never executes.
+
+100
+00:05:49.430 --> 00:05:50.650
+Never executes.
+
+101
+00:05:50.650 --> 00:05:53.490
+The other point is,
+this code does execute.
+
+102
+00:05:53.490 --> 00:05:55.590
+Just because this blew up,
+this is already executed.
+
+103
+00:05:55.590 --> 00:06:00.360
+It might have done something other,
+more complex than print hello, okay?
+
+104
+00:06:00.360 --> 00:06:02.380
+So there you go.
+
+105
+00:06:02.380 --> 00:06:06.430
+So, if we look at this kind of in
+a picture, we set the try block.
+
+106
+00:06:06.430 --> 00:06:06.980
+It runs.
+
+107
+00:06:06.980 --> 00:06:07.646
+It runs.
+
+108
+00:06:07.646 --> 00:06:12.607
+And the try / except kind of has
+this escape hatch that says,
+
+109
+00:06:12.607 --> 00:06:15.819
+if there is a [SOUND] explosion somehow,
+
+110
+00:06:15.819 --> 00:06:21.001
+then it runs this alternate code and
+it comes out and finishes.
+
+111
+00:06:21.001 --> 00:06:22.040
+Okay?
+
+112
+00:06:22.040 --> 00:06:25.602
+And again, it doesn't go back and
+finish the block and
+
+113
+00:06:25.602 --> 00:06:31.290
+it doesn't undo the work that is done
+by that, so it doesn't un-execute it.
+
+114
+00:06:31.290 --> 00:06:33.810
+If it executes and
+works it just keeps on going,
+
+115
+00:06:33.810 --> 00:06:37.710
+then it blows up,
+then it sort of flushes its way out.
+
+116
+00:06:37.710 --> 00:06:38.920
+Okay?
+
+117
+00:06:38.920 --> 00:06:43.020
+So here's an example of how you
+might do this in a running program,
+
+118
+00:06:43.020 --> 00:06:44.890
+like the programs that
+you're about to be assigned,
+
+119
+00:06:44.890 --> 00:06:47.920
+where you're supposed to check for
+user input having errors.
+
+120
+00:06:48.960 --> 00:06:53.190
+So here is a little
+conversion of a number, and
+
+121
+00:06:55.050 --> 00:07:00.530
+so we're saying, enter a number and
+we're putting a string into rawstr.
+
+122
+00:07:00.530 --> 00:07:04.340
+It's a string and so we don't know.
+
+123
+00:07:04.340 --> 00:07:06.210
+And here's where we're going to
+convert it to an integer and
+
+124
+00:07:06.210 --> 00:07:08.630
+we're just not sure if it's going to 
+work or not. 
+
+125
+00:07:08.630 --> 00:07:11.380
+So we know how int works.
+
+126
+00:07:11.380 --> 00:07:13.000
+It either converts it or it blows up.
+
+127
+00:07:14.080 --> 00:07:17.170
+So we know it's going to do that, we just
+don't know what the user's going to type.
+
+128
+00:07:17.170 --> 00:07:17.980
+We don't know.
+
+129
+00:07:17.980 --> 00:07:19.280
+So we have to take out insurance on it.
+
+130
+00:07:19.280 --> 00:07:22.941
+So this runs, and then we do a try and
+then we try to convert it.
+
+131
+00:07:22.941 --> 00:07:27.720
+And if it works, it's great, and
+if it fails, it runs this and
+
+132
+00:07:27.720 --> 00:07:29.520
+sets it to negative one.
+
+133
+00:07:29.520 --> 00:07:33.960
+And afterwards,
+we either have the number or negative one.
+
+134
+00:07:33.960 --> 00:07:39.280
+And so if the person enters 42,
+it says, nice work.
+
+135
+00:07:39.280 --> 00:07:40.510
+Well, let's show you where it runs.
+
+136
+00:07:41.560 --> 00:07:46.350
+If the person says 42 it runs
+through here, gets the string 42,
+
+137
+00:07:46.350 --> 00:07:50.170
+converts that to an integer,
+skips here, and then says, nice work.
+
+138
+00:07:50.170 --> 00:07:51.780
+And that's how it runs.
+
+139
+00:07:51.780 --> 00:07:57.830
+If on the other hand they type forty two,
+the words, this gets to be the string 'forty two'.
+
+140
+00:07:57.830 --> 00:08:02.030
+It runs here, this blows up.
+
+141
+00:08:02.030 --> 00:08:07.320
+So it comes and runs this part here, and
+then it says if ival is greater than zero,
+
+142
+00:08:07.320 --> 00:08:11.510
+which it is not true, so
+it runs this part, and says not a number.
+
+143
+00:08:11.510 --> 00:08:15.540
+So this is our way of compensating for
+
+144
+00:08:15.540 --> 00:08:20.580
+user input that might have errors in it,
+errors that were anticipated, right?
+
+145
+00:08:21.950 --> 00:08:25.720
+You'd rather at least put
+up some kind of a message
+
+146
+00:08:25.720 --> 00:08:28.910
+rather than just have a traceback if
+you're writing code for somebody else.
+
+147
+00:08:28.910 --> 00:08:31.990
+It just kind of is not very classy.
+
+148
+00:08:31.990 --> 00:08:38.720
+So the classic
+
+149
+00:08:38.720 --> 00:08:42.609
+program to do this is a time and
+a half for overtime pay.
+
+150
+00:08:45.300 --> 00:08:49.550
+So you get some pay rate, like $10
+an hour for your first 40 hours, and
+
+151
+00:08:49.550 --> 00:08:52.320
+then you get $15 for any hours above it.
+
+152
+00:08:52.320 --> 00:08:57.165
+So you have to say, oh, okay,
+if this ends up being some kind of
+
+153
+00:08:57.165 --> 00:09:00.600
+a thing where,
+let me draw that picture a little better.
+
+154
+00:09:02.580 --> 00:09:06.550
+Hours greater than 40,
+you're going to do one thing,
+
+155
+00:09:06.550 --> 00:09:09.420
+and if hours are less than 40
+you're going to do another thing.
+
+156
+00:09:09.420 --> 00:09:11.450
+So you have two payout calculations.
+
+157
+00:09:11.450 --> 00:09:17.100
+If the hours are greater than 40,
+then you're going to do overtime calculation,
+
+158
+00:09:17.100 --> 00:09:22.970
+which is kind of like 40 times the regular
+rate and then the number of excess hours,
+
+159
+00:09:22.970 --> 00:09:27.720
+like five overtime hours, times
+the rate times one and a half.
+
+160
+00:09:27.720 --> 00:09:32.490
+So this is kind of the calculation that
+happens if the hours are greater than 40.
+
+161
+00:09:32.490 --> 00:09:40.808
+And then, if the hours are less than 40,
+it's just pay equals rate times hours.
+
+162
+00:09:40.808 --> 00:09:46.070
+So you're going to do one of two
+calculations depending on how it works.
+
+163
+00:09:46.070 --> 00:09:49.820
+So that's one of the programming
+problems for this chapter.
+
+164
+00:09:49.820 --> 00:09:53.340
+That's a classic,
+it's the classic if / then / else.
+
+165
+00:09:53.340 --> 00:09:55.150
+You can actually do it with
+an if / then if you're tricky.
+
+166
+00:09:55.150 --> 00:09:58.970
+There's a lot of ways to do this,
+so pick one and do it.
+
+167
+00:09:58.970 --> 00:10:05.960
+Now the next thing I want you to do is
+I want you to take that same program,
+
+168
+00:10:05.960 --> 00:10:11.482
+do it again in another assignment, or
+another problem in the chapter, and
+
+169
+00:10:11.482 --> 00:10:16.530
+that is have some kind of a non-numeric
+input and have it blow up.
+
+170
+00:10:16.530 --> 00:10:19.820
+So if they type something like nine,
+
+171
+00:10:19.820 --> 00:10:24.700
+put out an error, or if they type
+something here, put out an error.
+
+172
+00:10:24.700 --> 00:10:27.430
+Now don't write a loop, no loop.
+
+173
+00:10:29.200 --> 00:10:33.380
+This is one execution of the program and
+this is another execution of the program.
+
+174
+00:10:33.380 --> 00:10:35.630
+Later, we can write loops,
+we haven't even talked about loops.
+
+175
+00:10:35.630 --> 00:10:37.360
+So this is running it twice.
+
+176
+00:10:37.360 --> 00:10:39.800
+All I want you to do is exit.
+
+177
+00:10:39.800 --> 00:10:42.350
+So take a look in the book
+as to how to just get out.
+
+178
+00:10:42.350 --> 00:10:45.770
+So I don't want you to try to say,
+I'm going to prompt for
+
+179
+00:10:45.770 --> 00:10:47.920
+these numbers until I get a good one.
+
+180
+00:10:47.920 --> 00:10:49.050
+We'll do that later.
+
+181
+00:10:49.050 --> 00:10:52.750
+I just want you to deal with
+the fact that you read a thing,
+
+182
+00:10:52.750 --> 00:10:57.000
+you use the try to convert it
+to a float and see if it works.
+
+183
+00:10:57.000 --> 00:10:59.180
+And if you don't, you just quit.
+
+184
+00:10:59.180 --> 00:11:02.590
+Don't try to be tricky and
+repeatedly prompt.
+
+185
+00:11:02.590 --> 00:11:04.780
+So don't repeatedly prompt.
+
+186
+00:11:04.780 --> 00:11:11.094
+One prompt and then quit.
+
+187
+00:11:11.094 --> 00:11:12.850
+Okay?
+
+188
+00:11:12.850 --> 00:11:15.980
+So this is conditional execution.
+
+189
+00:11:15.980 --> 00:11:18.060
+If, if / then / else, and
+
+190
+00:11:18.060 --> 00:11:21.920
+then I added a little bit with the try and
+except as well.
+
+191
+00:11:21.920 --> 00:11:26.330
+And the try and except is really
+a limited kind of a problem.
+
+192
+00:11:26.330 --> 00:11:30.950
+It really is to compensate for errors that
+you anticipate are going to happen and
+
+193
+00:11:30.950 --> 00:11:35.660
+you can imagine what you want to do as
+a replacement for what those errors are.
+
+194
+00:11:35.660 --> 00:11:37.400
+Okay?
+See you next lecture.
